@@ -63,10 +63,15 @@ end
 def computer_picks_square(board)
   #first try to find two O's in a row to win
   position = find_two_in_a_row(board, 'O')
+  if position
+    puts "computer found two O in a row at #{position}"
+  end
   if position == false
     #otherwise try to block X
     position= find_two_in_a_row(board, 'X')
+    puts "computer found to X in a row at #{position}"
     if position == false
+      puts "computer did not find 2 X in a row"
       position = empty_positions(board).sample
     end
   end
@@ -101,4 +106,3 @@ if winner
 else
   puts "It's a tie!"
 end
-
