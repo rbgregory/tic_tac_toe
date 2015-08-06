@@ -72,8 +72,8 @@ private
           position = board.get_empty_positions.sample
         end
       end
-      position
     end
+    position
   end
   
   def first_move_strategy
